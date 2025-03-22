@@ -52,16 +52,16 @@ The dataset nichh.dta contains data from 582 households in Nicaragua. It is a su
 **1. Summary statistics:**
 ## Descriptive Statistics
 
-| Statistic                                | Mean        | St. Dev.    | Min        | Max        | N   |
+| Household Statistic                                | Mean        | St. Dev.    | Min        | Max        | N   |
 |------------------------------------------|-------------|-------------|------------|------------|-----|
-| (hh) 15-64                               | 1.270       | 0.996       | 0          | 6          | 582 |
-| (hh) 15-64                               | 1.595       | 0.999       | 0          | 8          | 582 |
-| (hh) head of hh age                     | 46.014      | 15.721      | 15         | 97         | 582 |
-| (hh) head of hh educ                    | 5.628       | 5.222       | 0          | 20         | 576 |
-| (hh) total consumption                   | 34,596.900  | 27,105.440  | 3,680.866  | 184,360.800| 582 |
-| (hh) dist to health center (km)          | 4.076       | 2.351       | 0.000      | 13.000     | 582 |
-| (hh) dist to school (km)                 | 3.263       | 2.197       | 0.050      | 9.500      | 581 |
-| (hh) owned land (in ha)                  | 3.380       | 25.944      | 0.000      | 423.000    | 582 |
+| 15-64                               | 1.270       | 0.996       | 0          | 6          | 582 |
+| 15-64                               | 1.595       | 0.999       | 0          | 8          | 582 |
+| head of hh age                     | 46.014      | 15.721      | 15         | 97         | 582 |
+| head of hh educ                    | 5.628       | 5.222       | 0          | 20         | 576 |
+| total consumption                   | 34,596.900  | 27,105.440  | 3,680.866  | 184,360.800| 582 |
+| dist to health center (km)          | 4.076       | 2.351       | 0.000      | 13.000     | 582 |
+| dist to school (km)                 | 3.263       | 2.197       | 0.050      | 9.500      | 581 |
+| owned land (in ha)                  | 3.380       | 25.944      | 0.000      | 423.000    | 582 |
 
 - On average, households have around 1.3 adult males and 1.6 adult females, with the number of adults varying significantly between households. 
 - Education levels vary, with an average of 5.6 years of schooling. 
