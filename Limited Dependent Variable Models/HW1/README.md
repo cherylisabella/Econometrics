@@ -1,4 +1,4 @@
-# Econometrics 3 Homework 2 
+# Econometrics 3 Homework 1
 
 ## CMLE and OLS
 
@@ -148,8 +148,6 @@ $−0.024(0.031)$ has no causal interpretation because it represents the raw dif
 | minority                                           | -0.0255875| 0.0305505  | -0.8375449| 0.4024447  |
 | treatment                                          | 0.0468077 | 0.0365191  | 1.2817328 | 0.2001715  |
 | minority:treatment                                 | -0.0876568| 0.0421888  | -2.0777244| 0.0379362  |
-
-
 
 
 **Comparison to Table 4, Panel A (OLS Results):**
