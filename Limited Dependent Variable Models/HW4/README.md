@@ -133,15 +133,20 @@ A potential problem is that the comparison relies on assumptions about the evolu
 ### 6. Simplified Staggered Treatment Model with 2 States and 3 Periods
 To construct the table, we first created a dataset containing the variables $state$, $period$, $treatment$, and an $suicide_{rate}$. Since no real data was provided, we randomly chose the suicide rate as the outcome variable.
 
-| **Table 1: Results of the TWFE regression and computation of weights `w_it`** |  |  |  |  |  |
-|---|---|---|---|---|---|
+<div align="center">
+
+**Table 1: Results of the TWFE regression and computation of weights `w_it`**
+
 | state | period | treatment | suicide_rate | residuals | weights        |
-| 1     | 1      | 0         | 5             | 0         | 0.000000e+00   |
-| 1     | 2      | 1         | 7             | 0         | -6.004800e+15  |
-| 1     | 3      | 1         | 8             | 0         | 1.715657e+15   |
-| 2     | 1      | 0         | 6             | 0         | 0.000000e+00   |
-| 2     | 2      | 0         | 7             | 0         | 0.000000e+00   |
-| 2     | 3      | 1         | 9             | 0         | 7.064470e+14   |
+|-------|--------|-----------|--------------|-----------|----------------|
+| 1     | 1      | 0         | 5            | 0         | 0.000000e+00   |
+| 1     | 2      | 1         | 7            | 0         | -6.004800e+15  |
+| 1     | 3      | 1         | 8            | 0         | 1.715657e+15   |
+| 2     | 1      | 0         | 6            | 0         | 0.000000e+00   |
+| 2     | 2      | 0         | 7            | 0         | 0.000000e+00   |
+| 2     | 3      | 1         | 9            | 0         | 7.064470e+14   |
+
+</div>
 
 Next, we estimated a Two-Way Fixed Effects (TWFE) regression using the feols() function in R, controlling for both state and period fixed effects. After running the regression, I extracted the residuals $e_{it}$ and computed the weights using the formula:
 
