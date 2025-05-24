@@ -40,7 +40,9 @@ The propensity score is defined as:
 
 <p align="center">$p(X) = P(T = 1 \mid X)$</p>
 
+<div align="center">
 <img src="figure1.png" width="500" style="display:block; margin: 0 auto;"/>
+</div>
 
 From Figure 1:
 
