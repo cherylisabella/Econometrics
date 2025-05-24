@@ -55,6 +55,8 @@ Given:
   $children = \beta_0 + \beta_1educ + \beta_2age + \beta_3age^2 + u$
 </p>
 
+<div align="center">
+
 |                         | **educ**        | **children (2)** | **children (3)** |
 |-------------------------|-----------------|------------------|------------------|
 | **frsthalf**             | -0.852*** (0.113) |                  |                  |
@@ -70,6 +72,8 @@ Given:
 | **F Statistic**          | 175.207***      | 1,751.100***     | 1,915.196***     |
 | **Note:**                | *p*<0.1; **p**<0.05; ***p**<0.01 | | |
 
+</div>
+  
 In the first stage of OLS, we first see that `frsthalf` is significantly and negatively associated with education, as expected (being born in the first half of the year is associated with -0.85 years of education, everything else equal). We note that $frsthalf$ only explains 10% of the variation of education, which is little.
 
 For the effect of education on fertility, the following methods were used: an OLS estimation and an IV model using `frsthalf` as an instrument for education. As far as age is concerned, the estimates are significant and identical in both models: the positive coefficient on age and the negative coefficient on age squared indicate that fertility initially increases with age, but that the desire for additional children diminishes as women get older.
