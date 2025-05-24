@@ -31,7 +31,10 @@ Since the goal is to come up with the best possible estimate of $\beta$, the est
 
 Given access to the two datasets, we could use the weighted average of the two estimates:
 
-$\hat{\beta} = \frac{\frac{\beta_1}{Var(\beta_1)}+\frac{\beta_2}{Var(\beta_2)}}{\frac{1}{Var(\beta_1)}+\frac{1}{Var(\beta_2)}} = \frac{\frac{5}{8}+\frac{6}{4}}{\frac{1}{8}+\frac{1}{4}} \approx 5.67$ 
+<p align="center">
+$$\hat{\beta} = \frac{\frac{\beta_1}{Var(\beta_1)} + \frac{\beta_2}{Var(\beta_2)}}{\frac{1}{Var(\beta_1)} + \frac{1}{Var(\beta_2)}} = \frac{\frac{5}{8} + \frac{6}{4}}{\frac{1}{8} + \frac{1}{4}} \approx 5.67$$
+</p>
+
 
 -------------------------------------
 
@@ -53,8 +56,11 @@ The dataset nichh.dta contains data from 582 households in Nicaragua. It is a su
 
 
 **1. Summary statistics:**
+
 ## Descriptive Statistics
 
+<div align="center">
+  
 | Household Statistic                                | Mean        | St. Dev.    | Min        | Max        | N   |
 |------------------------------------------|-------------|-------------|------------|------------|-----|
 | 15-64                               | 1.270       | 0.996       | 0          | 6          | 582 |
@@ -66,6 +72,8 @@ The dataset nichh.dta contains data from 582 households in Nicaragua. It is a su
 | dist to school (km)                 | 3.263       | 2.197       | 0.050      | 9.500      | 581 |
 | owned land (in ha)                  | 3.380       | 25.944      | 0.000      | 423.000    | 582 |
 
+</div>
+
 - On average, households have around 1.3 adult males and 1.6 adult females, with the number of adults varying significantly between households. 
 - Education levels vary, with an average of 5.6 years of schooling. 
 - Total consumption averages 34,596.9 Cordobas, but with substantial variation, reflecting wide disparities in household welfare. 
@@ -76,8 +84,11 @@ The dataset nichh.dta contains data from 582 households in Nicaragua. It is a su
 A model that allows for increasing returns to household assets could be the log-linear model, where we regress the log of the consumption of the household on the different household assets. 
 $log(constot_i) = \beta_0 + \beta_1\times adultm_i + \beta_2\times adultf_i +  \beta_3\times headage_1 + \beta_4\times headeduc_i + \beta_5 healthkm_i + u$
 
-| **Log-linear Model Regression Results**  |  |
-|--------------------------------------------|--|
+<div align="center">
+
+ **Log-linear Model Regression Results** 
+
+
 | **Dependent variable:** | log(constot) |
 |-------------------------|------------|
 | **adultm**              | 0.114\*** (0.025) |
@@ -94,7 +105,7 @@ $log(constot_i) = \beta_0 + \beta_1\times adultm_i + \beta_2\times adultf_i +  \
 | **F Statistic**         | 47.583\*** (df = 6; 568) |
 |-------------------------|-------------------------|
 | **Note:**               | <sup>*</sup> p<0.1; <sup>**</sup> p<0.05; <sup>***</sup> p<0.01 |
-
+</div>
 
 **Interpretation of coefficients:**
 
@@ -109,8 +120,10 @@ In our sample, only the composition of the household appears to be strongly rela
 
 **3. Minimum significance level needed to reject hypothesis that age of household head does not affect total household consumption:**
 
-We first isolate the relation between headage and hh consumption : 
+We first isolate the relation between headage and hh consumption :
 
+<div align="center">
+ 
 | **Dependent variable:** | constot |
 |:------------------------|:-------:|
 | **headage**             | 141.081<sup>**</sup> (71.350) |
@@ -122,6 +135,7 @@ We first isolate the relation between headage and hh consumption :
 | **F Statistic**         | 3.910<sup>**</sup> (df = 1; 580) |
 |-------------------------|-------------------------|
 | **Note:**               | <sup>*</sup> p<0.1; <sup>**</sup> p<0.05; <sup>***</sup> p<0.01 |
+</div>
 
 Since the p-value for the estimate of the relation between hh consumption and age equals 0.0484789,, we can reject the null hypothesis that the age of the household head has no effect on consumption at the 4.8 level, which is below the standard significance level of 5%.
 
@@ -130,12 +144,16 @@ Since the p-value for the estimate of the relation between hh consumption and ag
 
 The older the head of household, the older the other members of the household: children may grow up and leave the household. This can lead to an overall decline in consumption. Graphically, we represent consumption on the age of the household head in grey. In blue, we plot the average consumption of the household for each age. Overall, it starts trending downwards from the age of ~55. 
 
+<div align="center">
 <img src="headplot.png" alt="Consumption and age of the head of the household" width="500" style="display:block; margin: 0 auto;"/>
+</div>
 
 **5. Estimation of model from qn 2 - household heads with at least primary school completed (i.e. 6 years of schooling or more) versus all others:**
 
-## Impact of Education Level of Head on Household Consumption
+<div align="center">
 
+**Impact of Education Level of Head on Household Consumption**
+ 
 | **Variable**                  | **Primary Education (1)**        | **No Primary Education (2)**      |
 |:------------------------------|:---------------------------------:|:---------------------------------:|
 | **Male Adults**                | 3,212.696<sup>*</sup> (1,824.675) | 3,428.023<sup>***</sup> (1,051.068) |
@@ -153,6 +171,7 @@ The older the head of household, the older the other members of the household: c
 | **F Statistic**                | 17.917<sup>***</sup> (df = 6; 271) | 11.350<sup>***</sup> (df = 6; 290) |
 |--------------------------------|-----------------------------------|-----------------------------------|
 | **Note:**                      | <sup>*</sup> p<0.1; <sup>**</sup> p<0.05; <sup>***</sup> p<0.01 |
+</div>
 
 **Results:** 
 
