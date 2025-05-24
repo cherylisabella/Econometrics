@@ -6,13 +6,17 @@ Concepts convered: Regression Discontinuity Design (RDD) and Difference-in-Diffe
 
 **1. Absence of manipulation around the threshold**
 
+<div align="center">
 <img src="hist1.png" width="500" style="display:block; margin: 0 auto;"/>
+</div>
 
 The histogram suggests that there is no evidence of manipulation in the margin of victory. The distribution of the variable appears smooth around the threshold, indicating a lack of irregularities. Had there been a manipulation, we would expect to see a concentration of observations immediately beyond the threshold, potentially indicating electoral bias in favor of the ruling party. However, no such pattern is observed, allowing us to conclude that candidates aligned with the ruling party did not have the ability to influence the election outcomes.
 
 **2. Scatter plots for employment growth and night lights**
 
+<div align="center">
 <img src="scatterplots.png" width="1000" style="display:block; margin: 0 auto;"/>
+</div>
 
 A discontinuity in employment growth is observed for constituencies aligned with the government. The graph indicates that firms in these constituencies experienced higher growth compared to others. While the increase in night lights is less pronounced, it appears to follow a similar trend, suggesting a potential correlation with the observed employment growth.
 
@@ -114,7 +118,9 @@ Following this logic, it is likely that the estimate in column 3 is affected by 
 
 **1. Trajectories of total investment and self-financed investment**
 
+<div align="center">
 <img src="investmentplots1.png" width="1000" style="display:block; margin: 0 auto;"/>
+</div>
 
 The graphs indicate that, prior to the policy implementation, both municipal and other types of companies were following a similar trajectory. However, there is a significant spike in investment for municipal companies immediately after the policy was announced in 2005.
 
@@ -154,18 +160,23 @@ Table 3 shows the reform's effects on municipal-led companies. The coefficients 
 
 **2b. Graph with effects for each year**
 
+<div align="center">
 <img src="invt.png" width="1000" style="display:block; margin: 0 auto;"/>
+</div>
 
 The graphs for both total investment and self-financed investment illustrate the investment behavior of municipality-led firms compared to state-led firms before and after the reform. Crucially for the Difference-in-Differences (DiD) approach, the absence of significant differences before the reform's announcement provides evidence of parallel trends. After the reform's announcement, we observe that both total and self-financed investments begin to increase gradually. The differences are more pronounced in the case of self-investment, which experiences significant increases starting from 2006.
 
 **3. Using actual year of implementation as treatment year**
 
+<div align="center">
 <img src="invt07.png" width="1000" style="display:block; margin: 0 auto;"/>
+</div>
 
 Using the year of the reform's implementation as the comparison point allows us to assess potential anticipation effects. As mentioned in the paper, it was widely known that the law would be approved following its announcement in 2005. Consequently, we might have expected some increases in investment prior to its implementation. Both figures suggest that investment patterns began changing between 2005 and 2006, indicating some anticipation before the law's approval. However, even when disregarding these anticipation effects, the pre-trend coefficients are not statistically different from zero, supporting the validity of the parallel trends assumption.
 
 **Bonus question: How would a graph without parallel trends look like?**
 
+<div align="center">
 <img src="invtnocontrol.png" width="500" style="display:block; margin: 0 auto;"/>
-
+</div>
 
