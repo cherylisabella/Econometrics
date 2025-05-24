@@ -53,9 +53,10 @@ Given the limitations identified above, a better model to determine World Cup ra
   $H_1:$ Household head’s education affects consumption.
 </p>
 
+<div align="center">
   
-| **Regression Results for Log-linear Model**                 |  |
-|-------------------------------------------------------------|--|
+**Regression Results for Log-linear Model**
+
 | **Statistic**                                               | **Value**                          |
 |-------------------------------------------------------------|------------------------------------|
 | **Dependent variable:**                                     | Log of Total Household Consumption |
@@ -74,6 +75,7 @@ Given the limitations identified above, a better model to determine World Cup ra
 | **F Statistic**                                             | 44.449<sup>***</sup> (df = 7; 567) |
 |-------------------------------------------------------------|------------------------------------|
 | **Note:**                                                   | <sup>*</sup> p<0.1; <sup>**</sup> p<0.05; <sup>***</sup> p<0.01 |
+</div>
 
 The minimum significance level at which we can reject the null hypothesis that the education level of the household head does not affect total household consumption corresponds to when the p-value for the coefficient for the household head’s education variable is less than our chosen significance level. Estimating the log-linear regression model, we find the p-value for Head's Education to be 1.7682225 × 10−4; as also shown in table 1, this means that the coefficient for the household head’s education variable is highly statistically significant and below any conventional significance level (e.g. 0.05, 0.01, or 0.001). Thus, there is strong evidence that the household head’s education significantly affects total household consumption, also controlling for other variables such as age, number of male and female adults, land owned, and distances to school and health center. The minimum significance level at which we can reject the null hypothesis is any level more than 1.7682225 × 10−4.
 
@@ -101,8 +103,10 @@ reg2 <- lm(log(constot) ~ adultm + I(adultm + adultf) + headage + headeduc + hea
 
 reg2pvalue <- summary(reg2)$coefficients[2,4] # significant at the 5% level
 ```
-| **Regression Results after removing land area over 100ha**  |  |
-|------------------------------------------------------------|--|
+<div align="center">
+  
+**Regression Results after removing land area over 100ha**
+
 | **Statistic**                                              | **Value**                                    |
 |------------------------------------------------------------|----------------------------------------------|
 | **Dependent variable:**                                    | Log of Total Household Consumption           |
@@ -121,6 +125,7 @@ reg2pvalue <- summary(reg2)$coefficients[2,4] # significant at the 5% level
 | **F Statistic**                                            | 40.484<sup>***</sup> (df = 7; 561)           |
 |------------------------------------------------------------|----------------------------------------------|
 | **Note:**                                                  | <sup>*</sup> p<0.1; <sup>**</sup> p<0.05; <sup>***</sup> p<0.01 |
+</div>
 
 To compare if the coefficients for male and female adults in the regression are statistically different from each other (or in this case if male is greater than female), we use a t-test for the difference between the two coefficients. 
 
@@ -156,7 +161,9 @@ Then, calculating the p-value we find it to be equal to 0.080988, meaning there 
 
 **4. Correlation between household's educ and age**
 
+<div align="center">
 <img src="headeduc_headage_plot.png" alt="Plot of Head's Education vs. Head's Age" width="500" style="display:block; margin: 0 auto;"/>
+</div>
 
 Calculating the correlation between household head education and age, we obtain a value of -0.3117732.
 
@@ -182,8 +189,9 @@ We can perform a t-test to test whether the coefficient of education is differen
 
 
 **6. Restimation of model** 
-
+<div align="center">
 <img src="reestimation_less100.png" alt="Plot of reestimated model" width="500" style="display:block; margin: 0 auto;"/>
+</div>
 
 Looking at the summary statistics and Figure 1, the density plot for households' land area is skewed to the left, with most households having around 25ha. 
 
