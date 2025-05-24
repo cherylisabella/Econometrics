@@ -113,20 +113,28 @@ The null hypothesis states the probability the characteristics of the candidate 
 ### 5. Perform that test including in the variables from the candidates’ survey only. Can you reject balance? Compare with the same test using a probit model. Hint: Perform a likelihood ratio test using the lmtest package in R.
 Table 1 shows the p value of the likelihood ratio. The p value is higher than 0.41 for both Logit and Probit. Hence, we cannot reject the null hypothesis, indicating that the characteristics of the candidate may have an impact on the probability of receiving the treatment, indicating a potential imbalance.
 
+<div align="center">
+   
 **Table 1: P-ValueLikelihood ratio for Probit and Logit Model**
 
-| Logit | Probit | $\chi^2$ |
-|---|---|---|
-| 0.41 | 0.414 |  |
+| Logit | Probit |
+|---|---|
+| 0.41 | 0.414 |
+
+</div>
 
 ### 6. Perform that test including in X the variables from the candidates’ survey and the variables from coding the resumes. Can you reject balance? Compare with the same test using a probit model. Hint: same as the previous question.
 Table 2 presents the p-value of the likelihood ratio test for both the Logit and Probit models when including the variables derived from coding the résumés. In both cases, the p-value does not exceeds 0.03, which is statistically significant at the 5% level. Consequently, we can reject the null hypothesis, indicating that, once the variables from coding the résumés are included, the imbalance is no longer present.
 
+<div align="center">
+
 **Table 2: P-ValueLikelihood ratio for Probit and Logit Model**
 
-| Logit | Probit | $\chi^2$ |
-|---|---|---|
-| 0.034 | 0.035 |  |
+| Logit | Probit |
+|---|---|
+| 0.034 | 0.035 |
+
+</div>
 
 ### 7. Why is footnote 25 important? 
 When accounting for characteristics that create imbalances between the treatment and control groups, such as candidates' relevant skills and work experience, we obtain robust results.
@@ -140,14 +148,19 @@ $−0.024(0.031)$ has no causal interpretation because it represents the raw dif
 
 ### 2. Regression results comparison 
 
-| **Table 3: OLS Regression Results for ENTRETIEN** | | | | |
-|---------------------------------------------------|-----------|------------|-----------|------------|
-| Term                                              | Estimate  | Std. Error | t Value   | Pr(>t)   |
-|---------------------------------------------------|-----------|------------|-----------|------------|
-| (Intercept)                                        | 0.1167281 | 0.0249858  | 4.6717820 | 0.0000033  |
-| minority                                           | -0.0255875| 0.0305505  | -0.8375449| 0.4024447  |
-| treatment                                          | 0.0468077 | 0.0365191  | 1.2817328 | 0.2001715  |
-| minority:treatment                                 | -0.0876568| 0.0421888  | -2.0777244| 0.0379362  |
+
+<div align="center">
+
+**Table 3: OLS Regression Results for ENTRETIEN** 
+
+| Term                          | Estimate   | Std. Error  | t Value    | Pr(>t)    |
+|-------------------------------|------------|-------------|------------|-----------|
+| (Intercept)                    | 0.1167281  | 0.0249858   | 4.6717820  | 0.0000033 |
+| minority                       | -0.0255875 | 0.0305505   | -0.8375449 | 0.4024447 |
+| treatment                      | 0.0468077  | 0.0365191   | 1.2817328  | 0.2001715 |
+| minority:treatment             | -0.0876568 | 0.0421888   | -2.0777244 | 0.0379362 |
+
+</div>
 
 
 **Comparison to Table 4, Panel A (OLS Results):**
@@ -163,44 +176,53 @@ $−0.024(0.031)$ has no causal interpretation because it represents the raw dif
 
 ### 3. Strong assumptions imposed by model 
 
-| **Table 4: Probit Regression Results for ENTRETIEN** | | | | |
-|-----------------------------------------------------|-----------|------------|------------|------------|
+<div align="center">
+
+**Table 4: Probit Regression Results for ENTRETIEN** 
+
 | Term                                                | Estimate  | Std. Error | z Value    | Pr(>z)   |
 |-----------------------------------------------------|-----------|------------|------------|------------|
 | (Intercept)                                          | -1.1915032| 0.1273685  | -9.3547681 | 0.0000000  |
 | minority                                             | -0.1422608| 0.1665082  | -0.8543772 | 0.3930579  |
 | treatment                                            | 0.2114735 | 0.1669384  | 1.2667762  | 0.2054687  |
 | minority:treatment                                   | -0.5197429| 0.2283654  | -2.2759269 | 0.0230171  |
-
+</div>
 
 **Strong Assumptions Imposed by the Model:**
 *   The Probit model assumes a continuous latent variable $y^{\ast}$ representing a firm’s net utility (e.g., profit or benefit) from interviewing a candidate. The observed binary outcome $y = 1$ if $\textit{y}^* > 0$. $\textit{y}^*$ is modeled as a linear combination of covariates, which may oversimplify actual decision-making processes.
 
-### 4. The causal effect of anonymisation on minority candidates’ interview rate is:
-$\Phi(\alpha_0 + \alpha_1 + \alpha_2 + \alpha_3) - \Phi(\alpha_0 + \alpha_1)$.
+### 4. The causal effect of anonymisation on minority candidates’ interview rate is: $\Phi(\alpha_0 + \alpha_1 + \alpha_2 + \alpha_3) - \Phi(\alpha_0 + \alpha_1)$.
+
 The causal effect of anonymisation on majority candidates’ interview rate is:
 $\Phi(\alpha_0 + \alpha_2) - \Phi(\alpha_0)$ where $\Phi$ is the cumulative distribution function of the standard normal distribution.
 
 ### 5. The causal effect of anonymization on the interview gap is:
 $[\Phi(\alpha_0 + \alpha_1 + \alpha_2 + \alpha_3) - \Phi(\alpha_0 + \alpha_1)] - [\Phi(\alpha_0 + \alpha_2) - \Phi(\alpha_0)]$.
 
-| **Table 5: OLS Model Results for ENTRETIEN** | | | | | |
-|---------------------------------------------|-----------|------------|-----------|------------|-----------------|
+
+<div align="center">
+   
+**Table 5: OLS Model Results for ENTRETIEN** 
+
 | Term                                        | Estimate  | Std. Error | z Value   | Pr(>z)   | Marginal Effect |
 |---------------------------------------------|-----------|------------|-----------|------------|-----------------|
 | (Intercept)                                  | 0.1167281 | 0.0249858  | 4.6717820 | 0.0000033  |                 |
 | minority                                     | -0.0255875| 0.0305505  | -0.8375449| 0.4024447  |                 |
 | treatment                                    | 0.0468077 | 0.0365191  | 1.2817328 | 0.2001715  |                 |
 | minority:treatment                           | -0.0876568| 0.0421888  | -2.0777244| 0.0379362  |                 |
+</div>
 
-| **Table 6: Probit Model Results for ENTRETIEN with Marginal Effects** | | | | | |
-|---------------------------------------------------------------------|-----------|------------|------------|------------|-----------------|
+<div align="center">
+   
+**Table 6: Probit Model Results for ENTRETIEN with Marginal Effects** 
+
 | Term                                                                | Estimate  | Std. Error | z Value    | Pr(>z)   | Marginal Effect |
 |---------------------------------------------------------------------|-----------|------------|------------|------------|-----------------|
 | (Intercept)                                                         | -1.1915032| 0.1273685  | -9.3547681 | 0.0000000  | -0.0688428      |
 | minority                                                            | -0.1422608| 0.1665082  | -0.8543772 | 0.3930579  | 0.0003965       |
 | treatment                                                           | 0.2114735 | 0.1669384  | 1.2667762  | 0.2054687  | -0.0688428      |
 | minority:treatment                                                   | -0.5197429| 0.2283654  | -2.2759269 | 0.0230171  | 0.0003965       |
+</div>
 
 *   For minority status: The probit marginal effect is -0.0688, which is larger in magnitude than the OLS coefficient would typically be.
 *   For treatment: The probit marginal effect is 0.0004, which is very close to zero and not statistically significant (p-value = 0.9850). These results suggest that minority status has a negative effect on interview probability, while the treatment (anonymization) has virtually no effect.
